@@ -34,14 +34,32 @@ public class JpaMain {
 //            Member findMember = em.find(Member.class, 1L);
 //            findMember.setName("HelloJPA");
 
-            List<Member> result = em.createQuery("select m from Member as m", Member.class)
-                    .setFirstResult(1)
-                    .setMaxResults(10)
-                    .getResultList();
+//            List<Member> result = em.createQuery("select m from Member as m", Member.class)
+//                    .setFirstResult(1)
+//                    .setMaxResults(10)
+//                    .getResultList();
+//
+//            for (Member member : result) {
+//                System.out.println("member.name = " + member.getName());
+//            }
 
-            for (Member member : result) {
-                System.out.println("member.name = " + member.getName());
-            }
+//            //비영속
+//            Member member = new Member();
+//            member.setId(101L);
+//            member.setName("HelloJPA");
+//
+//            //영속
+//            System.out.println("=== BEFORE ===");
+//            em.persist(member);
+//            System.out.println("=== AFTER ===");
+//
+//            Member findMember = em.find(Member.class, 101L);
+//
+//            System.out.println("findMember.id = " + findMember.getId());
+//            System.out.println("findMember.name = " + findMember.getName());
+
+            Member findMember1 = em.find(Member.class, 101L);
+            Member findMember2 = em.find(Member.class, 101L);
 
             tx.commit();
         } catch (Exception e) {
