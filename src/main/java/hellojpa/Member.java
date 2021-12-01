@@ -39,7 +39,7 @@ public class Member {
         return team;
     }
 
-    public void changTeam(Team team) {
+    public void changeTeam(Team team) {
         this.team = team;
         team.getMembers().add(this);
     }
