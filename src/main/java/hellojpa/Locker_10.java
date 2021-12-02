@@ -2,7 +2,7 @@ package hellojpa;
 
 import javax.persistence.*;
 
-@Entity
+//@Entity
 public class Locker_10 {
 
     @Id @GeneratedValue
