@@ -2,7 +2,7 @@ package hellojpa;
 
 import javax.persistence.*;
 
-@Entity
+//@Entity
 @SequenceGenerator(
         name = "MEMBER_SEQ_GENERATOR", //시퀀스 제너레이터 이름
         sequenceName = "MEMBER_SEQ", //매핑할 데이터베이스 시퀀스 이름

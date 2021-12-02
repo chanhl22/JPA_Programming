@@ -2,8 +2,8 @@ package hellojpa;
 
 import javax.persistence.*;
 
-//@Entity
-public class Member_8 {
+@Entity
+public class Member_10 {
 
     @Id @GeneratedValue
     @Column(name = "MEMBER_ID")
@@ -12,12 +12,14 @@ public class Member_8 {
     @Column(name = "USERNAME")
     private String username;
 
-//    @Column(name = "TEAM_ID")
-//    private Long teamId;
-
+    //양방향 매핑 추가
     @ManyToOne
-    @JoinColumn(name = "TEAM_ID")
-    private Team_8 team;
+    @JoinColumn(name = "TEAM_ID", insertable = false, updatable = false)
+    private Team_10 team;
+
+    @OneToOne
+    @JoinColumn(name = "LOCKER_ID")
+    private Locker_10 locker;
 
     public Long getId() {
         return id;
@@ -33,14 +35,5 @@ public class Member_8 {
 
     public void setUsername(String username) {
         this.username = username;
-    }
-
-    public Team_8 getTeam() {
-        return team;
-    }
-
-    public void changeTeam(Team_8 team) {
-        this.team = team;
-        team.getMembers().add(this);
     }
 }

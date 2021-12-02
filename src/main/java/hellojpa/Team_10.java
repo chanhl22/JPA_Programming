@@ -4,8 +4,8 @@ import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
-//@Entity
-public class Team_9 {
+@Entity
+public class Team_10 {
 
     @Id @GeneratedValue
     @Column(name = "TEAM_ID")
@@ -14,7 +14,7 @@ public class Team_9 {
 
     @OneToMany
     @JoinColumn(name = "TEAM_ID")
-    private List<Member_9> members = new ArrayList<>();
+    private List<Member_10> members = new ArrayList<>();
 
     public Long getId() {
         return id;
@@ -32,11 +32,11 @@ public class Team_9 {
         this.name = name;
     }
 
-    public List<Member_9> getMembers() {
+    public List<Member_10> getMembers() {
         return members;
     }
 
-    public void setMembers(List<Member_9> members) {
+    public void setMembers(List<Member_10> members) {
         this.members = members;
     }
 }

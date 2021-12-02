@@ -5,7 +5,7 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.Date;
 
-@Entity
+//@Entity
 //@Table(uniqueConstraints = @UniqueConstraint(name = "constraintName", columnNames = {"name"}))
 public class Member_2 {
 
