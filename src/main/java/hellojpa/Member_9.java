@@ -12,6 +12,11 @@ public class Member_9 {
     @Column(name = "USERNAME")
     private String username;
 
+    //양방향 매핑 추가
+    @ManyToOne
+    @JoinColumn(name = "TEAM_ID", insertable = false, updatable = false)
+    private Team_9 team;
+
     public Long getId() {
         return id;
     }
