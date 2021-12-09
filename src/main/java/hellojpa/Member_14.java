@@ -2,7 +2,7 @@ package hellojpa;
 
 import javax.persistence.*;
 
-@Entity
+//@Entity
 public class Member_14 extends BaseEntity {
 
     @Id @GeneratedValue
